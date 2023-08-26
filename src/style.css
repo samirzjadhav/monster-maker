@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-monster: #a8d530;
+  --color-tail: #ff4f51;
+  --color-horns: #ff4f51;
+}
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@layer components {
+  body {
+    @apply bg-[#ffb64c];
+  }
+
+  .wrapper {
+    @apply bg-[#ffffff] w-[90vmin] py-[30px] rounded-xl absolute top-[50%] left-[50%];
+    transform: translate(-50%, -50%);
+    box-shadow: 0 30px 50px rgba(65, 46, 19, 0.25);
+  }
+
+  .buttons {
+    @apply w-[90%] relative m-auto flex justify-around pt-[20px] pb-[40px];
+    border-bottom: 2px dashed #000000;
+  }
+
+  .buttons button {
+    @apply bg-[#ffb64c] font-medium text-base py-[10px] px-[30px] rounded-3xl outline-none border-none;
+  }
+
+  .container {
+    @apply relative;
+  }
+
+  .monster {
+    @apply overflow-hidden relative m-auto h-[420px] w-[350px];
+  }
+
+  .monster-body {
+    @apply h-[310px] w-[220px] bg-[var(--color-monster)] absolute m-auto left-0 right-0 top-[50px];
+    border-radius: 10px 10px 0 0;
+  }
+
+  .monster-body:after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 30px;
+    background-color: var(--color-monster);
+    bottom: -39px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 189.5px 0 0 0 var(--color-monster);
+  }
+}
