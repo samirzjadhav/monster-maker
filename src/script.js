@@ -13,3 +13,11 @@ const bodyColor = [
   "#904ae8",
   "#ffa711",
 ];
+
+let color = [...bodyColor, "transparent"];
+console.log(color);
+let [counter1, counter2, counter3, counter4] = Array(4).fill(0);
+
+let setCounter = (counter, len) => {
+  return counter < len - 1 ? counter + 1 : 0;
+};
