@@ -639,14 +639,53 @@ body {
 }
 
 .monster-body:after {
-  content: "";
   position: absolute;
+  bottom: -39px;
   height: 40px;
   width: 30px;
-  background-color: var(--color-monster);
-  bottom: -39px;
+  content: "";
   border-radius: 0 0 5px 5px;
   box-shadow: 189.5px 0 0 0 var(--color-monster);
+  background-color: var(--color-monster);
+}
+
+.monster-horns {
+  position: absolute;
+  top: -85px;
+  left: 50%;
+  height: 200px;
+  width: 330px;
+  border-radius: 50%;
+  box-shadow: 0 30px var(--color-horns);
+  transform: translateX(-50%);
+}
+
+.monster-tail {
+  position: absolute;
+  left: 220px;
+  top: 270px;
+  height: 50px;
+  width: 120px;
+  border-top-width: 0px;
+  border-radius: 0 0 20px 0;
+  transform: rotate(-10deg);
+  border: 10px solid var(--color-tail);
+}
+
+.monster-tail::before {
+  position: absolute;
+  left: 85px;
+  bottom: 39px;
+  height: 0px;
+  width: 0px;
+  border-bottom: 20px solid var(--color-tail);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+img {
+  position: absolute;
+  left: -1.5px;
 }
 
 :root {

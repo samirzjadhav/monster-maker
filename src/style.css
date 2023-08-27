@@ -48,13 +48,34 @@
   }
 
   .monster-body:after {
+    @apply absolute h-[40px] w-[30px] bottom-[-39px];
     content: "";
-    position: absolute;
-    height: 40px;
-    width: 30px;
-    background-color: var(--color-monster);
-    bottom: -39px;
     border-radius: 0 0 5px 5px;
     box-shadow: 189.5px 0 0 0 var(--color-monster);
+    background-color: var(--color-monster);
+  }
+
+  .monster-horns {
+    @apply w-[330px] h-[200px] rounded-[50%] absolute top-[-85px] left-[50%];
+    box-shadow: 0 30px var(--color-horns);
+    transform: translateX(-50%);
+  }
+
+  .monster-tail {
+    @apply h-[50px] w-[120px] absolute left-[220px] top-[270px] border-t-0;
+    border-radius: 0 0 20px 0;
+    transform: rotate(-10deg);
+    border: 10px solid var(--color-tail);
+  }
+
+  .monster-tail::before {
+    @apply absolute h-0 w-0 left-[85px] bottom-[39px];
+    border-bottom: 20px solid var(--color-tail);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  img {
+    @apply absolute left-[-1.5px];
   }
 }
