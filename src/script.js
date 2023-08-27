@@ -12,6 +12,16 @@ const bodyColors = [
   "#ff4f51",
   "#904ae8",
   "#ffa711",
+  "#00adef",
+  "#5cd2ff",
+  "#FFEECC",
+  "#FFDDCC",
+  "#FFCCCC",
+  "#FEBBCC",
+  "#FF78C4",
+  "#E1AEFF",
+  "#FFBDF7",
+  "#FFECEC",
 ];
 
 let color = [...bodyColors, "transparent"];
@@ -23,7 +33,7 @@ let setCounter = (counter, len) => {
 };
 
 faceBtn.addEventListener("click", () => {
-  counter1 = setCounter(counter1, 6);
+  counter1 = setCounter(counter1, 10);
   document
     .getElementById("face")
     .setAttribute("src", `assets/face-${counter1}.png`);

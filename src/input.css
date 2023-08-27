@@ -686,6 +686,8 @@ body {
 img {
   position: absolute;
   left: -1.5px;
+  height: 310px;
+  width: 220px;
 }
 
 :root {

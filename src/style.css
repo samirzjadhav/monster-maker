@@ -76,6 +76,6 @@
   }
 
   img {
-    @apply absolute left-[-1.5px];
+    @apply w-[220px] h-[310px] absolute left-[-1.5px];
   }
 }
